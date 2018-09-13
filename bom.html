@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Uso del BOM</title>
+
+<!--=================================================================================================================================
+JavaScript Cookie Example
+In the example to follow, we will create a cookie that stores the name of a visitor.
+The first time a visitor arrives to the web page, he will be asked to fill in his name. The name is then stored in a cookie.
+The next time the visitor arrives at the same page, he will get a welcome message.
+=======================================================================================================================================-->
+
+
+</head>
+<body>
+	<p id="prueba"></p>
+	<p id="JS1"></p>
+	<p id="prueba2"></p>
+	<p id="prueba3"></p>
+	<p id="prueba4"></p>
+	<p id="prueba5"></p>
+	<p id="prueba6"></p>
+	<p id="prueba7"></p>
+	<p id="JS2"></p>
+	<p id="prueba8"></p>
+	<p id="prueba9"></p>
+	<p id="prueba10"></p>
+	<p id="prueba11"></p>
+	<p id="prueba12"></p>
+	<p id="JS3"></p>
+	<p id="prueba13"></p>
+	<p id="prueba14"></p>
+	<p id="prueba15"></p>
+	<p id="prueba16"></p>
+	<p id="prueba17"></p>
+	<p id="prueba18"></p>
+	<p id="prueba19"></p>
+	<p id="prueba20"></p>
+	<p id="prueba21"></p>
+	<p id="prueba22"></p>
+	<p id="pruebada"></p>
+	
+
+
+<!--======================================================================
+Window Location Assign
+The window.location.assign() method loads a new document.
+======================================================================-->
+<h2>JS History</h2>
+
+<h3>The window.location object</h3>
+
+<input type="button" value="Load new document" onclick="newDoc()">
+
+<!--======================================================================
+Window History Back
+The history.back() method loads the previous URL in the history list.
+This is the same as clicking the Back button in the browser.
+======================================================================-->
+
+<input type="button" value="Back" onclick="goBack()">
+
+<!--======================================================================
+Window History Forward
+The history forward() method loads the next URL in the history list.
+This is the same as clicking the Forward button in the browser.
+======================================================================-->
+
+<input type="button" value="Forward" onclick="goForward()">
+
+<!--======================================================================
+Alert Box
+An alert box is often used if you want to make sure information comes through to the user.
+When an alert box pops up, the user will have to click "OK" to proceed.
+======================================================================-->
+
+<h2>JS Pop-up Alert</h2>
+<h3>JS Alert</h3>
+<p><button onclick="myFunction()">Try it</button></p>
+
+<!--======================================================================
+Confirm Box
+A confirm box is often used if you want the user to verify or accept something.
+When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed.
+If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false.
+======================================================================-->
+
+
+<h3>JS Confirm</h3>
+<button onclick="myFunction1()">Try it</button>
+<p id="prueba23"></p>
+
+<!--======================================================================
+Prompt Box
+A prompt box is often used if you want the user to input a value before entering a page.
+When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value.
+If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
+======================================================================-->
+
+<h3>JS Prompt</h3>
+<button onclick="myFunction2()">Try it</button>
+<p id="prueba24"></p>
+
+<!--======================================================================
+The setTimeout() Method
+The window.setTimeout() method can be written without the window prefix.
+The first parameter is a function to be executed.
+The second parameter indicates the number of milliseconds before execution.
+======================================================================-->
+
+<h2>JS Timing</h2>
+<h3>Establecer tiempo</h3>
+<p>Click "Try it". Espera 3 segundos, y la pagina avisara con un "Hola".</p>
+
+<p><button onclick="setTimeout(myFunction3, 3000);">Try it</button></p>
+
+<!--======================================================================
+How to Stop the Execution?
+The clearTimeout() method stops the execution of the function specified in setTimeout().
+window.clearTimeout(timeoutVariable)
+The window.clearTimeout() method can be written without the window prefix.
+The clearTimeout() method uses the variable returned from setTimeout():
+======================================================================-->
+
+<p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+<p>Click "Stop" to prevent the first function to execute.</p>
+<p>(You must click "Stop" before the 3 seconds are up.)</p>
+
+<p><button onclick="myVar = setTimeout(myFunction4, 3000)">Try it</button>
+
+<button onclick="clearTimeout(myVar)">Stop it</button></p>
+
+<!--======================================================================
+The setInterval() Method
+The setInterval() method repeats a given function at every given time-interval.
+window.setInterval(function, milliseconds);
+The window.setInterval() method can be written without the window prefix.
+The first parameter is the function to be executed.
+The second parameter indicates the length of the time-interval between each execution.
+This example executes a function called "myTimer" once every second (like a digital watch).
+======================================================================-->
+
+<h3>Establecer intervalo</h3>
+<p>Un script en esta pagian inicia el reloj:</p>
+
+<p id="prueba25"></p>
+
+
+<!--======================================================================
+How to Stop the Execution?
+The clearInterval() method stops the executions of the function specified in the setInterval() method.
+window.clearInterval(timerVariable)
+The window.clearInterval() method can be written without the window prefix.
+The clearInterval() method uses the variable returned from setInterval():
+myVar = setInterval(function, milliseconds);
+clearInterval(myVar);
+======================================================================-->
+<h3>Detener reloj</h3>
+
+<p id="prueba26"></p>
+
+<button onclick="clearInterval(myVar)">Stop time</button>
+
+
+
+
+<!--======================================================================
+SCRIPTS
+======================================================================-->
+
+<script type="text/javascript" src="bom.js"></script>
+
+<script> function newDoc() {
+    window.location.assign("https://www.w3schools.com")
+}
+</script>
+
+<script> function goBack() {
+    window.history.back()
+}
+</script>
+	
+<script> function goForward() {
+    window.history.forward()
+}
+</script>
+
+
+<script>
+function myFunction() {
+    alert("Soy una ventana de alerta!");
+}
+</script>
+
+<script>
+function myFunction1() {
+    var txt;
+    if (confirm("Press a button!")) {
+        txt = "You pressed OK!";
+    } else {
+        txt = "You pressed Cancel!";
+    }
+    document.getElementById("prueba23").innerHTML = txt;
+}
+</script>
+
+<script>
+function myFunction2() {
+    var txt;
+    var person = prompt("Please enter your name:", "Hernan");
+    if (person == null || person == "") {
+        txt = "User cancelled the prompt.";
+    } else {
+        txt = "Hello " + person + "! How are you today?";
+    }
+    document.getElementById("prueba24").innerHTML = txt;
+}
+</script>
+
+<script>
+function myFunction3() {
+    alert('Hola');
+}
+</script>
+
+<script>
+function myFunction4() {
+    alert("Hola");
+}
+</script>
+
+<script>
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("prueba25").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+<script>
+var myVar = setInterval(myTimer ,1000);
+function myTimer() {
+    var d = new Date();
+    document.getElementById("prueba26").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+
+
+
+	</body>
+	</html>
+
