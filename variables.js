@@ -12,7 +12,7 @@ var palabra = "palabras";
 console.log("palabras: ", palabra);
 
 var x = document.getElementById("variable2");
-x.innerHTML = "Uso de una variable de texto: " + palabra + "."
+x.innerHTML = "Uso de una variable de texto: " + palabra + ".";
 
 //variables boleanas
 var boleana = true;
@@ -32,7 +32,7 @@ x.innerHTML = "Uso de una variable de tipo arreglo: " + colores[1] + ".";
 var jugo = {"ingrediente1":"fresa", "ingrediente2":"mandarina", "ingrediente3":"platano"};
 console.log("jugo: ","ingrediente1");
 var x = document.getElementById("variable5");
-x.innerHTML = "Uso de una variable de tipo objeto: " + jugo + ".";
+x.innerHTML = "Uso de una variable de tipo objeto: " + "fresa ","ingrediente1" + ".";
 
 //Variables DOM (´Modelo de objetos del documento´)
 // El DOM es la estrctura de ibjetos que genera el navegador cuando se carga un documento y se puede alterar mediante
