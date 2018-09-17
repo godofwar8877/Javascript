@@ -36,7 +36,7 @@ window.onload = function(){
 				imagen.style.height = "100px";
 			}
 			
-			if (s>1){
+			if (s>1 && c<1){
 				document.getElementById("titulo").innerHTML = "Bienvenido usuario de Safari";
 				imagen.src = "img/Safari.png";
 				imagen.style.width = "100px";
